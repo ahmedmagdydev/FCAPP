@@ -6,25 +6,25 @@ $primary: #00907d;
 $lightGold: #cbac65;
 $lightBlue: #00907d;
 $gold: #aa8139;    
-@font-face {
-    font-family: 'dinnLight';
-    src: url('../fonts/DINNextLTArabic-Light.ttf') format('truetype');
-    font-style: light;
-    font-weight: light;
-}
+// @font-face {
+//     font-family: 'dinnLight';
+//     src: url('../fonts/DINNextLTArabic-Light.ttf') format('truetype');
+//     font-style: light;
+//     font-weight: light;
+// }
 
-;
+// ;
 
-@font-face {
-    font-family: 'dinnMedium';
-    src: url('../fonts/subset-DINNextLTArabic-Medium.eot');
-    src: url('../fonts/subset-DINNextLTArabic-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/subset-DINNextLTArabic-Medium.woff') format('woff'),
-        url('../fonts/subset-DINNextLTArabic-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-;
+// @font-face {
+//     font-family: 'dinnMedium';
+//     src: url('../fonts/subset-DINNextLTArabic-Medium.eot');
+//     src: url('../fonts/subset-DINNextLTArabic-Medium.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/subset-DINNextLTArabic-Medium.woff') format('woff'),
+//         url('../fonts/subset-DINNextLTArabic-Medium.ttf') format('truetype');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+// ;
 
 @font-face {
     font-family: 'dinnRegular';
@@ -59,7 +59,7 @@ a{
     color:$secondry;
 }
 .ql-container{
-    font-family: 'dinnRegular' !important;
+    font-family: 'dinnRegular',sans-serif !important;
 }
 .col.s2.nav-wrapper {
     right: 0;
@@ -124,7 +124,7 @@ img {
 }
 
 .btn {
-    font-size: 20px;
+    font-size: 16px;
     &-secondry,
     &-secondry:focus {
         background: $secondry;
@@ -138,7 +138,7 @@ img {
             background: lighten($primary, 10%);
         }
     }
-    &-flat {
+    &.btn-flat {
         width: 290px;
         white-space: pre-wrap;
         height: auto;
@@ -333,15 +333,14 @@ img {
         top: 20%;
         font-size: 1.5em;
         text-align: center;
-        left: 28%;
-        width: 43%;
+        width: 100%;
+        span{
+                display: inline-block;
+        }
     }
 }
 
-.chart-open .donut-inner {
-    left: 29%;
-    width: 40%;
-}
+
 
 .h5 {
     font-size: 1.64rem;

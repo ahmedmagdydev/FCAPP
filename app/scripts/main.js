@@ -172,6 +172,7 @@ $(document).ready(function() {
         $('.scroll').css('font-size', '1.4rem');
     });
 
+if ($('#editor').length > 0) {
 var toolbarOptions = [['bold', 'italic', 'underline', ],[{ 'color': [] }, { 'background': [] }],[{ 'direction': 'rtl' }],['clean'] ];
 
 var quill = new Quill('#editor', {
@@ -180,7 +181,16 @@ var quill = new Quill('#editor', {
   },
   theme: 'snow'
 });
-quill.format({'align', 'right'});
+quill.format('align', 'right');
+}
+
+$.each($('.charts canvas'), function(index, val) {
+    var canvasWidth = $(this).width() - 60;
+    console.log($(this).next('.donut-inner').find('span'));
+    $(this).next('.donut-inner').find('span').css('width', canvasWidth);
+});
+
+
 
 });
 var $input = $('.monthPicker').pickadate({
@@ -229,6 +239,55 @@ var $input = $('.monthPicker').pickadate({
         [2018, 12, 1]
     ]
 });
+$.each($('.data .date'), function(index, val) {
+     $(this).pickadate({
+   selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year
+    today: 'اليوم',
+    clear: 'مسح',
+    close: 'اغلاق',
+    format: 'mmmm, yyyy',
+    disable: [
+        true, [2016, 1, 1],
+        [2016, 2, 1],
+        [2016, 3, 1],
+        [2016, 4, 1],
+        [2016, 5, 1],
+        [2016, 6, 1],
+        [2016, 7, 1],
+        [2016, 8, 1],
+        [2016, 9, 1],
+        [2016, 10, 1],
+        [2016, 11, 1],
+        [2016, 12, 1],
+        [2017, 1, 1],
+        [2017, 2, 1],
+        [2017, 3, 1],
+        [2017, 4, 1],
+        [2017, 5, 1],
+        [2017, 6, 1],
+        [2017, 7, 1],
+        [2017, 8, 1],
+        [2017, 9, 1],
+        [2017, 10, 1],
+        [2017, 11, 1],
+        [2017, 12, 1],
+        [2018, 1, 1],
+        [2018, 2, 1],
+        [2018, 3, 1],
+        [2018, 4, 1],
+        [2018, 5, 1],
+        [2018, 6, 1],
+        [2018, 7, 1],
+        [2018, 8, 1],
+        [2018, 9, 1],
+        [2018, 10, 1],
+        [2018, 11, 1],
+        [2018, 12, 1]
+    ]
+  });
+});
+
 var picker = $input.data('pickadate');
 $('.monthPickerIcon img').click(function(e) {
     // stop the click from bubbling
