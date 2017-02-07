@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FC_APP</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
+  <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.theme.green.css" />
+  <link rel="stylesheet" href="/bower_components/drumjs/lib/drum.min.css" />
+  <link rel="stylesheet" href="/bower_components/quill/quill.snow.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="">
+  <!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+  <div class="row">
+    <div class="col s2 nav-wrapper">
+      <div class="nav">
+        <div class="nav-logo">
+          <a href="#"><img src="images/logo-nav.png" alt=""></a>
+        </div>
+        <div class="dashboard"><a href="./dashboard.html"><img src="images/dashboard-nav.png" alt=""></a></div>
+        <div class="case"><a href="./processes.html"><i class="material-icons ">work</i></a></div>
+        <div class="add-new"><a href="./create_process.html"><i class="material-icons ">note_add</i></a></div>
+        <div class="notifs"><a href="#"><img src="images/ring.png" alt=""></a></div>
+        <div class="pull-bottom">
+          <div class="profile"><a href="#"><img src="images/user.png" alt=""></a></div>
+          <div class="hide-nav"><a href="#"><img src="images/hide-nav.png" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col s10 main-content">
+      <h3 class="header">
+            <div class="right">
+            <input type="date" class="monthPicker" data-value="2017/01/01">
+            <span class="monthPickerIcon"><img src="images/calendar.jpg" alt=""></span>
+                <a href="#dashboard-modal" class="dash-setting"><i class="material-icons">library_add</i></a>
+            </div>
+            <img src="images/dashboard.jpg" alt=""> لوحة التحكم
+            <div>
+                <small>شهر نوفمير 2016</small>
+            </div>
+        </h3>
+      <div class="row charts">
+        <div class="col m4 s12">
+          <div class="chart-total">
+            <canvas width="200" height="200"></canvas>
+            <div class="donut-inner">
+              اجمالي المعاملات 324
+            </div>
+            <table class="table table-condensed hide-modal">
+              <tr>
+                <td><span class="chartColor lightGold"></span></td>
+                <td>المعاملات المفتوحة</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td><span class="chartColor lightBlue"></span></td>
+                <td>المعاملات المغلقة</td>
+                <td>204</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col m4 s12">
+          <div class="chart-open">
+            <canvas id="chartOpen" width="150" height="150"></canvas>
+            <div class="donut-inner">
+              المفتوحة 120
+            </div>
+            <table class="table table-condensed hide-modal">
+              <tr>
+                <td><span class="chartColor lightGold"></span></td>
+                <td>في الوقت المحدد </td>
+                <td>46</td>
+              </tr>
+              <tr>
+                <td><span class="chartColor gold"></span></td>
+                <td>متأخرة</td>
+                <td>74</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col m4 s12">
+          <div class="chart-time">
+            <div class="circle chartTime">
+              06D:12H
+            </div>
+            <table class="table table-condensed hide-modal">
+              <tr>
+                <td><img src="images/time.jpg" alt=""></td>
+                <td>متوسط الوقت المستغرق لإغلاق معاملة واحدة</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row charts">
+        <div class="col m6">
+          <div class="chart-thisMonth">
+            <canvas dir="rtl" id="thisMonth" width="250" height="150"></canvas>
+          </div>
+        </div>
+        <div class="col m6">
+          <div class="chart-lastMonth">
+            <canvas dir="rtl" id="lastMonth" width="250" height="150"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="dashboard-modal" class="modal">
+  <div class="modal-header">
+            <h4><img src="images/dashboard.jpg" alt=""> اعدادات لوحة التحكم
+      <div class="right">
+      <a href="#dashboard-order" class="btn-secondry btn modal-action modal-close">تحديث لوحة التحكم</a>
+      </div>
+      </h4>
+  </div>
+    <div class="modal-content">
+      
+      <div class="settings">
+      <div class="row">
+          <div class="col s6">
+              <input type="checkbox" class="filled-in" id="firstChart" checked="checked" />
+              <label for="firstChart"><span class="h5">المعاملات المفتوحة</span></label>
+              <p class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed consectetur enim reiciendis quasi soluta quibusdam voluptates vel ratione labore, minima, quod quaerat. Inventore quos ipsam ad voluptate, accusamus aperiam, blanditiis.</p>
+          </div>
+          <div class="col s6">
+              <p>
+                
+                <span class="chartTotalClone right"></span>
+              </p>
+          </div>
+      </div>
+       <div class="row">
+           <div class="col s6">
+               <input type="checkbox" class="filled-in" id="secondChart" checked="checked" />
+               <label for="secondChart"><span class="h5">المعاملات المعالجة</span></label>
+               <p class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed consectetur enim reiciendis quasi soluta quibusdam voluptates vel ratione labore, minima, quod quaerat. Inventore quos ipsam ad voluptate, accusamus aperiam, blanditiis.</p>
+           </div>
+           <div class="col s6">
+                <span class="chartOpenClone right"></span>
+               
+           </div>
+       </div>
+       <div class="row">
+           <div class="col s6">
+               <input type="checkbox" class="filled-in" id="secondChart" checked="checked" />
+               <label for="secondChart"><span class="h5">متوسط الوقت المستغرق</span></label>
+               <p class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed consectetur enim reiciendis quasi soluta quibusdam voluptates vel ratione labore, minima, quod quaerat. Inventore quos ipsam ad voluptate, accusamus aperiam, blanditiis.</p>
+           </div>
+           <div class="col s6">
+                <span class="chartTimeClone right"></span>
+               
+           </div>
+       </div>
+
+      </div>
+    </div>
+  </div>
+  <div id="dashboard-order" class="modal modal-sm">
+    <div class="modal-content">
+      <h4 class="center-align"> إعداة ترتيب لوحة التحكم
+        
+      </h4>
+      <ul class="collection with-header" id="listWithHandle">
+        <li class="collection-item"><div>Alvin1<a href="#!" class="secondary-content"><i class="material-icons">reorder</i></a></div></li>
+        <li class="collection-item"><div>Alvin2<a href="#!" class="secondary-content"><i class="material-icons">reorder</i></a></div></li>
+        <li class="collection-item"><div>Alvin3<a href="#!" class="secondary-content"><i class="material-icons">reorder</i></a></div></li>
+        <li class="collection-item"><div>Alvin4<a href="#!" class="secondary-content"><i class="material-icons">reorder</i></a></div></li>
+      </ul>
+    </div>
+    <div class="row center-align">
+    <a class="btn btn-secondry btn-large waves-effect waves-light">تأكيد</a>
+      <a class="btn waves-effect modal-action modal-close waves-light btn-large">إلغاء</a>
+    </div>
+   
+  </div>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/materialize/bin/materialize.js"></script>
+  <script src="/bower_components/chart.js/dist/Chart.js"></script>
+  <script src="/bower_components/Sortable/Sortable.js"></script>
+  <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
+  <script src="/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="/bower_components/drumjs/lib/drum.min.js"></script>
+  <script src="/bower_components/drumjs/contrib/hammerjs/hammer.min.js"></script>
+  <script src="/bower_components/drumjs/contrib/hammerjs/hammer.fakemultitouch.js"></script>
+  <script src="/bower_components/quill/quill.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/chartData.js -->
+  <script src="scripts/chartData.js"></script>
+  <!-- endbuild -->
+</body
+>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "fc-app",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "materialize": "^0.97.8",
+    "material-design-icons": "^3.0.1",
+    "chart.js": "^2.4.0",
+    "Sortable": "sortablejs#^1.4.2",
+    "owl.carousel": "^2.2.0",
+    "jquery.nicescroll": "jquery-nicescroll#^3.6.8",
+    "drumjs": "https://github.com/3epnm/drumjs.git#^0.1.3",
+    "quill":"^"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

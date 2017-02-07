@@ -1,0 +1,362 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FC_APP</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
+  <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.theme.green.css" />
+  <link rel="stylesheet" href="/bower_components/drumjs/lib/drum.min.css" />
+  <link rel="stylesheet" href="/bower_components/quill/quill.snow.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="">
+  <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div class="row">
+    <div class="col s2 nav-wrapper">
+      <div class="nav">
+        <div class="nav-logo">
+          <a href="#"><img src="images/logo-nav.png" alt=""></a>
+        </div>
+        <div class="dashboard"><a href="./dashboard.html"><img src="images/dashboard-nav.png" alt=""></a></div>
+        <div class="case"><a href="./processes.html"><i class="material-icons ">work</i></a></div>
+        <div class="add-new"><a href="./create_process.html"><i class="material-icons ">note_add</i></a></div>
+        <div class="notifs"><a href="#"><img src="images/ring.png" alt=""></a></div>
+        <div class="pull-bottom">
+          <div class="profile"><a href="#"><img src="images/user.png" alt=""></a></div>
+          <div class="hide-nav"><a href="#"><img src="images/hide-nav.png" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col s10 main-content">
+      <h3 class="header"><img src="images/case.png" alt="">المعاملات
+      <div class="right">
+        <a href="#search-modal">
+          <i class="material-icons">search</i>
+        </a>
+        <a href="#"><i class="material-icons">list</i></a>
+        <a href="#" class="open-filter"><i class="material-icons settings"></i></a>
+      </div>
+      </h3>
+      <div class="modal" id="search-modal">
+         <div class="search-wrapper card">
+           <input id="search" placeholder="ابحث عن معاملة باستخدام العنوان او الرقم التسلسلي" class="autocomplete"><i class="material-icons">search</i>
+           <div class="search-results"></div>
+         </div>
+       </div>
+      <div class="row">
+       <div class="col s12">
+      <ul class="tabs">
+        <li class="tab">
+            <a target="_self" href="#">عاجلة</a>
+          </li>
+          <li class="tab">
+            <a target="_self" href="#">جديدة</a>
+          </li>
+          <li class="tab">
+            <a target="_self" href="#">عاجلة</a>
+          </li>
+          <li class="tab">
+            <a target="_self" href="#">جديدة</a>
+          </li>
+          <li class="tab">
+            <a target="_self" href="#">عاجلة</a>
+          </li>
+          <li class="tab">
+            <a target="_self" href="#">جديدة</a>
+          </li>
+      </ul>
+    </div>
+      <p class="center-align process--results">12 معاملة مطابقة لـ '22554'</p>
+       
+        <div class="owl-carousel owl-theme">
+          <a href="./process.html" class="process ">
+            <p class="title">تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع </p>
+            <p class="process--status center-align">حالة المعاملة - تحت مراجعة اعضاء اللجنة</p>
+            <div class="center-align">
+              <img src="images/process.png" alt="" style="width:100px;margin:0 auto">
+            </div>
+            <span class="row remaining">
+              <span class="col s6 center-align vertical-line">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+              <span class="col s6 center-align">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+            </span>
+          </a>
+          <a href="./process.html" class="process ">
+            <p class="title">تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع </p>
+            <p class="process--status center-align">حالة المعاملة - تحت مراجعة اعضاء اللجنة</p>
+            <div class="center-align">
+              <img src="images/process.png" alt="" style="width:100px;margin:0 auto">
+            </div>
+            <span class="row remaining">
+              <span class="col s6 center-align vertical-line">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+              <span class="col s6 center-align">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+            </span>
+          </a>
+          <a href="./process.html" class="process ">
+            <p class="title">تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع </p>
+            <p class="process--status center-align">حالة المعاملة - تحت مراجعة اعضاء اللجنة</p>
+            <div class="center-align">
+              <img src="images/process.png" alt="" style="width:100px;margin:0 auto">
+            </div>
+            <span class="row remaining">
+              <span class="col s6 center-align vertical-line">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+              <span class="col s6 center-align">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+            </span>
+          </a>
+          <a href="./process.html" class="process ">
+            <p class="title">تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع </p>
+            <p class="process--status center-align">حالة المعاملة - تحت مراجعة اعضاء اللجنة</p>
+            <div class="center-align">
+              <img src="images/process.png" alt="" style="width:100px;margin:0 auto">
+            </div>
+            <span class="row remaining">
+              <span class="col s6 center-align vertical-line">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+              <span class="col s6 center-align">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+            </span>
+          </a>
+          <a href="./process.html" class="process ">
+            <p class="title">تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع تكوير الطريق السريع </p>
+            <p class="process--status center-align">حالة المعاملة - تحت مراجعة اعضاء اللجنة</p>
+            <div class="center-align">
+              <img src="images/process.png" alt="" style="width:100px;margin:0 auto">
+            </div>
+
+            <span class="row remaining">
+              <span class="col s6 center-align vertical-line">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+              <span class="col s6 center-align">
+                <div class="remaining--time">02-</div>
+                عدد الايام المتبقية لإغلاق المعاملة
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="scan-modal" class="modal">
+    <div class="modal-content">
+      <h4><img src="images/scan-sm.png" alt=""> معاينة المسح
+        <div class="right">
+          <a href="#!" class="modal-action modal-close btn-secondry btn ">مسح ورفع الملفات</a>
+          <a class="waves-effect waves-light btn">معاينة من جديد</a>
+        </div>
+      </h4>
+      <div class="photo-preview">
+        <img src="images/scan-dummy.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div id="confirm-modal" class="modal modal-sm">
+    <div class="modal-content">
+      <h4 class="center-align">تأكيد انشاء معاملة جديدة
+        
+      </h4>
+      <p class="center-align">سيتم اشعار فريق المستشارين</p>
+      <div class="row center-align">
+        <a class="btn btn-secondry btn-large waves-effect waves-light">تأكيد</a>
+        <a class="btn waves-effect modal-action modal-close waves-light btn-large">إلغاء</a>
+      </div>
+    </div>
+  </div>
+  <div id="filter-modal">
+    <h4>تصفية متقدمة
+    <div class="right">
+      <div class="btn btn-secondry btn-sm apply-filter">تصفية</div>
+    </div></h4>
+    <h6>
+      <strong>استعراض معاملات خلال</strong>
+    </h6>
+    <div class="row">
+      <div class="col s6">
+        <input name="group1" type="radio" id="test1" />
+      <label for="test1">هذا الشهر</label>
+      </div>
+      <div class="col s6">
+        <input name="group1" type="radio" id="test2" />
+        <label for="test2">هذا الربع</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <input name="group1" type="radio" id="test3" />
+      <label for="test3">هذا الشهر</label>
+      </div>
+      <div class="col s6">
+        <input name="group1" type="radio" id="test4" />
+        <label for="test4">هذا الربع</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <a href="#">فترة زمنية مخصصة</a>
+      </div>
+    </div>
+    <h6>
+      <strong>نوع المعاملة</strong>
+    </h6>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="presentation" checked="checked" />
+      <label for="presentation">presentation driven</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="document" />
+        <label for="document">document driven</label>
+      </div>
+    </div>
+    <h6>
+      <strong>الحالة</strong>
+    </h6>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="new" checked="checked" />
+      <label for="new">انشئت حديثا</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="write" />
+        <label for="write">كتابة التوصية</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="agreed" checked="checked" />
+      <label for="agreed">وافق الامين العام علي التوصية</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="waiting" />
+        <label for="waiting">بانتظار موافقة اعضاء اللجنية</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="new" checked="checked" />
+      <label for="new">انشئت حديثا</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="write" />
+        <label for="write">كتابة التوصية</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="agreed" checked="checked" />
+      <label for="agreed">وافق الامين العام علي التوصية</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="waiting" />
+        <label for="waiting">بانتظار موافقة اعضاء اللجنية</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="new" checked="checked" />
+      <label for="new">انشئت حديثا</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="write" />
+        <label for="write">كتابة التوصية</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="agreed" checked="checked" />
+      <label for="agreed">وافق الامين العام علي التوصية</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="waiting" />
+        <label for="waiting">بانتظار موافقة اعضاء اللجنية</label>
+      </div>
+    </div>
+    <h6>
+      <strong>الاهمية</strong>
+    </h6>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="new" checked="checked" />
+      <label for="new">انشئت حديثا</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="write" />
+        <label for="write">كتابة التوصية</label>
+      </div>
+    </div>
+    <h6>
+      <strong>التقدم</strong>
+    </h6>
+    <div class="row">
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="new" checked="checked" />
+      <label for="new">انشئت حديثا</label>
+      </div>
+      <div class="col s6">
+        <input type="checkbox" class="filled-in" id="write" />
+        <label for="write">كتابة التوصية</label>
+      </div>
+    </div>
+  </div>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/materialize/bin/materialize.js"></script>
+  <script src="/bower_components/chart.js/dist/Chart.js"></script>
+  <script src="/bower_components/Sortable/Sortable.js"></script>
+  <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
+  <script src="/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="/bower_components/drumjs/lib/drum.min.js"></script>
+  <script src="/bower_components/drumjs/contrib/hammerjs/hammer.min.js"></script>
+  <script src="/bower_components/drumjs/contrib/hammerjs/hammer.fakemultitouch.js"></script>
+  <script src="/bower_components/quill/quill.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

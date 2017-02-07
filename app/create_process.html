@@ -1,0 +1,210 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FC_APP</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.theme.green.css" />
+    <link rel="stylesheet" href="/bower_components/drumjs/lib/drum.min.css" />
+    <link rel="stylesheet" href="/bower_components/quill/quill.snow.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="row">
+        <div class="col s2 nav-wrapper">
+           <div class="nav">
+        <div class="nav-logo">
+          <a href="#"><img src="images/logo-nav.png" alt=""></a>
+        </div>
+        <div class="dashboard"><a href="./dashboard.html"><img src="images/dashboard-nav.png" alt=""></a></div>
+        <div class="case"><a href="./processes.html"><i class="material-icons ">work</i></a></div>
+        <div class="add-new"><a href="./create_process.html"><i class="material-icons ">note_add</i></a></div>
+        <div class="notifs"><a href="#"><img src="images/ring.png" alt=""></a></div>
+        <div class="pull-bottom">
+          <div class="profile"><a href="#"><img src="images/user.png" alt=""></a></div>
+          <div class="hide-nav"><a href="#"><img src="images/hide-nav.png" alt=""></a></div>
+        </div>
+      </div>
+        </div>
+        <div class="col s10 main-content">
+            <h3><img src="images/case.png" alt=""> إنشاء معاملة جديدة</h3>
+            <div class="row">
+                <div class="col m5">
+                    <div class="row">
+                      <div class="col s12">
+                        <a class="disabled btn-large btn-secondry" href="#confirm-modal">إنشاء معاملة جديدة</a>
+                        <a href="#" class="delete"><i class="material-icons small">delete</i></a>
+                      </div>
+                    </div>
+                    <form action="#">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="first_name" type="text" class="">
+                                <label for="first_name">الرقم التسلسلي</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>نوع المعاملة</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="first_name" type="text" class="">
+                                <label for="first_name">عنوان المعاملة</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>اهمية المعاملة</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input type="date" class="datepicker" placeholder="تاريخ استلام المعاملة">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <form class="col s12">
+                            <div class="row">
+                              <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">وصف العاملة</label>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="row">
+                          <div class="col s12">
+                            <div class="chips chips-placeholder input-field"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <h6 >الكلمات الدالة (المقترحة اوتوماتيكيا)</h6>
+                            <div class="chip">
+                                kilometers
+                                <i class="close material-icons">close</i>
+                              </div>
+                               <div class="chip">
+                                kilometers
+                              </div>
+                               <div class="chip">
+                                kilometers
+                              </div>
+                               <div class="chip">
+                                kilometers
+                                <i class="close material-icons">close</i>
+                              </div>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col m7">
+                  <div class="doc-container">
+                    <div class="valign-wrapper center-align">
+                      <div class="upload-doc valign">
+                        <img src="images/upload.png" alt="">
+                        <h5>ارفع المستندات هنا</h5>
+                        <a href="#" class="btn waves-effect waves-light btn-large">تصفح</a>
+
+                      </div>
+                    </div>
+                    <div class="divider-container">
+                      <div class="divider"></div>
+                      <span>أو</span>
+                    </div>
+                    <div class="valign-wrapper center-align">
+                      <div class="scan-doc valign">
+                        <img src="images/scan.png" alt="">
+                        <h5>قم بالمسح باستخدام الماسح الضوئي</h5>
+                        <a href="#scan-modal" class="btn waves-effect waves-light btn-large">معاينة المسح</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="scan-modal" class="modal">
+    <div class="modal-content">
+      <h4><img src="images/scan-sm.png" alt=""> معاينة المسح
+        <div class="right">
+          <a href="#!" class="modal-action modal-close btn-secondry btn ">مسح ورفع الملفات</a>
+          <a class="waves-effect waves-light btn">معاينة من جديد</a>
+        </div>
+      </h4>
+      <div class="photo-preview">
+        <img src="images/scan-dummy.png" alt="">
+      </div>
+    </div>
+   
+  </div>
+
+<div id="confirm-modal" class="modal modal-sm">
+    <div class="modal-content">
+      <h4 class="center-align">تأكيد انشاء معاملة جديدة
+        
+      </h4>
+      <p class="center-align">سيتم اشعار فريق المستشارين</p>
+      <div class="row center-align">
+      <a class="btn btn-secondry btn-large waves-effect waves-light">تأكيد</a>
+        <a class="btn waves-effect modal-action modal-close waves-light btn-large">إلغاء</a>
+      </div>
+    </div>
+   
+  </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/materialize/bin/materialize.js"></script>
+    <script src="/bower_components/chart.js/dist/Chart.js"></script>
+    <script src="/bower_components/Sortable/Sortable.js"></script>
+    <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="/bower_components/drumjs/lib/drum.min.js"></script>
+    <script src="/bower_components/drumjs/contrib/hammerjs/hammer.min.js"></script>
+    <script src="/bower_components/drumjs/contrib/hammerjs/hammer.fakemultitouch.js"></script>
+    <script src="/bower_components/quill/quill.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
