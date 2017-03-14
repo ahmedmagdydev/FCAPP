@@ -68,7 +68,7 @@
         <div class="col m8">
           <h5><img src="images/time-line.jpg" alt=""> اﻟﻤﻠﺨﺺ ﻭاﻟﺠﺪﻭﻝ اﻟﺰﻣﻨﻲ</h5>
           <div class="timeline">
-            <div class="item done">
+            <div class="item">
               <div class="icon"><i class="material-icons "><img src="images/line-1.jpg" alt=""></i></div>
               <div class="number">1</div>
               <div class="data">
@@ -76,7 +76,7 @@
                 <p class="truncate">اﺳﺘﻼﻡ ﻣﻠﻔﺎﺕ اﻟﻤﻌﺎﻣﻠﺔ</p>
               </div>
             </div>
-            <div class="item done">
+            <div class="item">
               <div class="icon"><i class="material-icons "><img src="images/line-2.jpg" alt=""></i></div>
               <div class="number">2</div>
               <div class="data">
@@ -84,7 +84,7 @@
                 <p class="truncate">اﺳﺘﻼﻡ ﻣﻠﻔﺎﺕ اﻟﻤﻌﺎﻣﻠﺔ</p>
               </div>
             </div>
-            <div class="item done">
+            <div class="item">
               <div class="icon"><i class="material-icons "><img src="images/line-3.jpg" alt=""></i></div>
               <div class="number">3</div>
               <div class="data">
@@ -116,7 +116,7 @@
                 <p class="truncate">اﺳﺘﻼﻡ ﻣﻠﻔﺎﺕ اﻟﻤﻌﺎﻣﻠﺔ</p>
               </div>
             </div>
-            <div class="item">
+            <div class="item done">
               <div class="icon"><i class="material-icons "><img src="images/line-7.jpg" alt=""></i></div>
               <div class="number">7</div>
               <div class="data">
@@ -197,10 +197,108 @@
               </div>
             </li>
           </ul>
+          <a href="#edit-status-modal" class="btn btn-secondry btn-block">تغيير حالة المعاملة</a>
         </div>
       </div>
     </div>
   </div>
+  <div id="edit-status-modal" class="modal modal-sm">
+            <div class="modal-content">
+              <h4 class="center-align">تغيير حالة المعاملة
+
+               </h4>
+              <div class="row">
+              <p class="col s10 offset-s1">
+      <input type="checkbox" class="filled-in custom-check" id="no1" checked="checked" />
+      <label for="no1">
+       تحت الدراسة لدي امانة اللجنة
+          </label>
+    </p>
+    <p class="col s10 offset-s1">
+      <input type="checkbox" class="filled-in custom-check" id="no1" checked="checked" />
+      <label for="no1">
+       تحت الدراسة لدي امانة اللجنة
+          </label>
+    </p>
+    <p class="col s10 offset-s1">
+      <input type="checkbox" class="filled-in custom-check" id="no1" checked="checked" />
+      <label for="no1">
+       تحت الدراسة لدي امانة اللجنة
+          </label>
+    </p>
+    <p class="col s10 offset-s1">
+      <input type="checkbox" class="filled-in custom-check" id="no1" checked="checked" />
+      <label for="no1">
+       تحت الدراسة لدي امانة اللجنة
+          </label>
+    </p>
+              </div>
+              <div class="row center-align">
+                <a href="#change" class="modal-action modal-close btn btn-secondry btn-large waves-effect waves-light">تغيير</a>
+                <a href="#" class="modal-action modal-close btn btn-primary btn-large waves-effect waves-light">الغاء</a>
+              </div>
+            </div>
+          </div>
+          <div id="change" class="modal modal-sm ">
+                    <div class="modal-content">
+                      <h4 class="center-align">هل انت متأكد
+
+                       </h4>
+                      <h6 class="text-light center">غيرت حالة المعاملة بنجاح الي</h6>
+<h4 class="center-align">تم الاعتماد
+
+                       </h4>
+                      <div class="row center-align">
+                        <a href="#confirm" class="modal-action modal-close btn btn-secondry btn-large waves-effect waves-light">تأكيد</a>
+                        <a href="#" class="modal-action modal-close btn btn-primary btn-large waves-effect waves-light">إلغاء</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="confirm" class="modal modal-sm ">
+                    <div class="modal-content">
+                      <h4 class="center-align">يرجي ادخال بيانات الامر السامي
+
+                       </h4>
+                    <form action="#">
+                      <div class="row">
+                            <div class="input-field col s12">
+                                <input id="number" type="text" class="">
+                                <label for="number">رقم الامر السامي</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                              <div class="input-field col s12">
+                                  <input type="date" class="datepicker" placeholder="تاريخ الامر السامي">
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                                <input id="subject" type="text" class="">
+                                <label for="subject">موضوع الامر السامي</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="upload" type="text" class="">
+                                <label for="upload">تحميل الامر السامي</label>
+                                <img class=" prefix" src="images/upload-dimm.jpg" style="width: 33px;" />
+                            </div>
+                        </div>
+                    </form>
+                      <div class="row center-align">
+                        <a href="#done" class="modal-action modal-close btn btn-secondry btn-large waves-effect waves-light">تأكيد</a>
+                        <a href="#" class="modal-action modal-close btn btn-primary btn-large waves-effect waves-light">إلغاء</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="done" class="modal modal-sm ">
+                    <div class="modal-content">
+                      <h4 class="center-align">تم تغيير الحالة بنجاح
+
+                       </h4>
+                      <h6 class="text-light center">تم اشعار جميع الجهات المعنية</h6>
+                    </div>
+                  </div>
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
