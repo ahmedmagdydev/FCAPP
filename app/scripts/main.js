@@ -5,6 +5,16 @@ $(document).ready(function () {
     $('body').toggleClass('nav-hidden')
   })
 
+    if ($(window).width() < 500 && !$('body').hasClass('nav-hidden') ) {
+      $('body').toggleClass('nav-hidden')
+    }
+
+  $(window).resize(function(event) {
+    if ($(window).width() < 500 && !$('body').hasClass('nav-hidden') ) {
+      $('body').toggleClass('nav-hidden')
+    }
+  });
+
   $('.owl-carousel').owlCarousel({
     loop: false,
     rtl: true,
@@ -189,10 +199,28 @@ $(document).ready(function () {
     $(this).next('.donut-inner').find('span').css('width', canvasWidth)
   })
 
+if ($('.doc-container-horizontal').length && $(window).width() > 700) {
   var uploadHeight = $(window).height()
   - $('.doc-container-horizontal').offset().top
   - 30
   $('.doc-container-horizontal > div').css('height', uploadHeight)
+  }
+  $(window).resize(function(event) {
+   if ($('.doc-container-horizontal').length && $(window).width() > 700) {
+  var uploadHeight = $(window).height()
+  - $('.doc-container-horizontal').offset().top
+  - 30
+  $('.doc-container-horizontal > div').css('height', uploadHeight)
+  }else{
+    $('.doc-container-horizontal > div').css('height', 'auto')
+  }
+  });
+
+  $('.owl-process .owl-item').height(($('.owl-process .owl-item.active').eq(0).width() ) * 1.16 )
+
+  $(window).resize(function(event) {
+    $('.owl-process .owl-item').height(($('.owl-process .owl-item.active').eq(0).width() ) * 1.16 )
+  });
 })
 var $input = $('.monthPicker').pickadate({
   selectMonths: true, // Creates a dropdown to control month
@@ -240,14 +268,22 @@ var $input = $('.monthPicker').pickadate({
         [2018, 12, 1]
   ]
 })
+
 $.each($('.data .date'), function (index, val) {
+  var min = $(this).data('min');
+var minArray = min.split(',');
+  var max = $(this).data('max');
+var maxArray = max.split(',');
+console.log(minArray)
   $(this).pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15, // Creates a dropdown of 15 years to control year
     today: 'اﻟﻴﻮﻡ',
     clear: 'ﻣﺴﺢ',
     close: 'اﻏﻼﻕ',
-    format: 'mmmm, dd'
+    format: 'mmmm, dd',
+    min: minArray,
+    max: maxArray
 
   })
 })
