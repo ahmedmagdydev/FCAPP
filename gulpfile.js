@@ -17,7 +17,7 @@ gulp.task('indexing',() =>{
     gulp.src(['app/*.html'], {read: false}), {
       transform: function (filepath) {
         if (filepath.slice(-5) === '.html') {
-          return '<li><a href="' + filepath.slice(4) + '">' + filepath.slice(5,-5) + '</a></li>';
+          return '<li><a href="' + filepath.slice(5) + '">' + filepath.slice(5,-5) + '</a></li>';
         }
         // Use the default transform as fallback:
         return inject.transform.apply(inject.transform, arguments);
